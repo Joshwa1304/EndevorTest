@@ -1,0 +1,109 @@
+/* Apply box-sizing globally */
+* {
+  box-sizing: border-box;
+}
+
+.content_display {
+    margin: 40px auto;
+    min-height: 500px;
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    box-shadow: 3px 4px 8px 0px rgba(0, 0, 0, 0.425);
+    background-color: white;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 3px solid green ;
+}
+
+/* Inner box for upload area */
+.chosefile {
+    padding: 20px;
+    border: 2px dashed #aaa;
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Down arrow */
+.arrow {
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+/* Stylish file input */
+.upload_input {
+  display: none;
+}
+
+.upload_button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #900C3F; /* red */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.upload_button:hover {
+  background-color: #c0392b;
+}
+
+.upload_icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.loading_text {
+  width: 24px;
+  height: 24px;
+  border: 4px solid #ccc;
+  border-top: 4px solid #007BFF;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px auto;
+}
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 4px solid #ccc;
+  border-top: 4px solid #007BFF;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.success_text {
+  font-weight: bold;
+  color: green;
+  font-size: 18px;
+  text-align: center;
+}
+
+.waiting_text {
+  font-weight: bold;
+  color: #555;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* .select_bar{
+    
+} */
+
