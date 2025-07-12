@@ -146,7 +146,23 @@ function Container({ action }) {
       )}
 
       {action === "transform" && transformOutput && (
-        <p className="output_text">🧩 Backend says: {transformOutput}</p>
+        // <p className="output_text">🧩 Backend says: {transformOutput}</p>
+        <div className="load_section">
+          {loading ? (
+            <>
+              <div className="spinner"></div>
+              <p className="loading_text">Uploading JSON to Git...</p>
+            </>
+          ) : success ? (
+            <>
+              <p className="success_text">✅ Successfully uploaded to Github</p>
+              <p className="output_text">🧩 response: {transformOutput}</p>
+            </>
+          ) : (
+            <p className="waiting_text">⚠️ Error to upload try Again!.....</p>
+          )}
+        </div>
+        
       )}
     </div>
   );

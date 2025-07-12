@@ -8,16 +8,30 @@ function App() {
 
   return (
     <>
-      <header className="heading">
-        <h1 className="heading_style">zMigGIT</h1>
+      <header className='heading'>
+        <h1 className='heading_style'>zMigGIT</h1>
       </header>
+      <div className='btnsandcontainer'>
+        <div className='Btns_container'>
+          <div className="btn_with_arrow">
+            <Button label="Endeavor Extract" onClick={() => setSelectedAction('extract')} active={selectedAction === 'extract'} />
+            {selectedAction === 'extract' && <span className="arrow_mark">➡</span>}
+          </div>
 
-      <div className="btnsandcontainer">
-        <div className="Btns_container">
-          <Button label="Endeavor Extract" onClick={() => setSelectedAction('extract')} />
-          <Button label="Load MongoDB" onClick={() => setSelectedAction('load')} />
-          <Button label="Transform Load to Git" onClick={() => setSelectedAction('transform')} />
-          <Button label="Validate & Report" onClick={() => setSelectedAction('validate')} />
+          <div className="btn_with_arrow">
+            <Button label="Load MongoDB" onClick={() => setSelectedAction('load')} active={selectedAction === 'load'} />
+            {selectedAction === 'load' && <span className="arrow_mark">➡</span>}
+          </div>
+
+          <div className="btn_with_arrow">
+            <Button label="Transform Load to Git" onClick={() => setSelectedAction('transform')} active={selectedAction === 'transform'} />
+            {selectedAction === 'transform' && <span className="arrow_mark">➡</span>}
+          </div>
+
+          <div className="btn_with_arrow">
+            <Button label="Validate & Report" onClick={() => setSelectedAction('validate')} active={selectedAction === 'validate'} />
+            {selectedAction === 'validate' && <span className="arrow_mark">➡</span>}
+          </div>
         </div>
 
         {selectedAction ? (

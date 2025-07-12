@@ -9,6 +9,28 @@
     border-radius: 5px;
 }
 .btns:hover{
-    color: #900C3F;
+    color: #68cca2;
     cursor: pointer;
+}
+
+.btn_with_arrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.arrow_mark {
+  color: green;
+  font-size: 50px;
+  position: absolute;
+  left: 100%;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+/* Optional: Active button style */
+.btns-active {
+  background-color: #444;
+  color: white;
 }

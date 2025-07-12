@@ -64,15 +64,6 @@
   font-size: 18px;
 }
 
-.loading_text {
-  width: 24px;
-  height: 24px;
-  border: 4px solid #ccc;
-  border-top: 4px solid #007BFF;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin: 0 auto 10px auto;
-}
 .spinner {
   width: 30px;
   height: 30px;
@@ -103,7 +94,24 @@
   text-align: center;
 }
 
-/* .select_bar{
-    
-} */
+.select_bar {
+  width: 250px;
+  padding: 10px 12px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  appearance: none;
+}
+
+.select_bar:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
 

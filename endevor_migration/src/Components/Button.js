@@ -1,8 +1,11 @@
 import './Styles/Button.css';
 
-function Button({ label = "Click", onClick }) {
+function Button({ label, onClick, active }) {
   return (
-    <button className="btns" onClick={onClick}>
+    <button
+      className={`btns ${active ? 'btns-active' : ''}`}
+      onClick={onClick}
+    >
       {label}
     </button>
   );
